@@ -1,0 +1,151 @@
+.test {
+    padding: 20px 0 50px;
+}
+
+.test__pre-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #DCDCF3;
+}
+
+.test__progress-bar {
+    display: flex;
+    margin: 60px 0 80px;
+}
+
+.progress-bar__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar__item:not(:first-child) {
+    margin-left: 130px;
+}
+
+.progress-bar__item:not(:last-child)::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 184px;
+    background: #DCDCF3;
+    height: 6px;
+    left: 28px;
+    top: 10px;
+}
+
+.progress-bar__item.complete:not(:last-child)::before {
+    background: #6933DC;
+}
+
+.progress-bar__item-circle {
+    width: 26px;
+    height: 26px;
+    background: #DCDCF3;
+    border-radius: 50%;
+}
+
+.progress-bar__item.complete .progress-bar__item-circle,
+.progress-bar__item.active .progress-bar__item-circle {
+    background: #6933DC;
+}
+
+.progress-bar__item.active::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    background: #DCDCF3;
+}
+
+.progress-bar__item-text {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.test__question-options {
+    margin-top: 58px;
+    min-height: 344px;
+}
+
+.question-option label {
+    cursor: pointer;
+}
+
+input[type="radio"]::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: inset 10px 10px #6933DC;
+    transition: .2s ease transform;
+    transform: scale(0);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.test__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test__time {
+    display: flex;
+    align-items: center;
+}
+
+.test__time-text {
+    margin-right: 15px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #6933DC;
+}
+
+.test__time-clock {
+    background-image: url("../images/clock.png");
+    background-size: cover;
+    background-position: center;
+    width: 27px;
+    height: 29px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.pass-question {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.pass-question a {
+    font-size: 17px;
+    line-height: 20px;
+    color: #6933DC;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.pass-question a:hover {
+    text-decoration: underline;
+}
+
+.pass-question a.disabled {
+    color: #e2dfe7;
+    pointer-events: none;
+    cursor: default;
+}
+
+.pass-question a img {
+    margin-left: 13px;
+}
+

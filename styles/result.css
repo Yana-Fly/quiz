@@ -1,0 +1,58 @@
+.result {
+    padding: 140px 0 31px;
+    text-align: center;
+}
+
+.result .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result__image {
+    position: absolute;
+    top: 95px;
+    z-index: -1;
+}
+
+.result__title {
+    max-width: 588px;
+    margin-bottom: 60px;
+}
+
+.result__score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 488px;
+    height: 388px;
+    margin-bottom: 80px;
+    background-image: url("../images/result-image.png");
+    background-size: cover;
+    background-position: center;
+    font-family: "Museo Sans Cyrl Bold", sans-serif;
+    font-size: 158px;
+    line-height: 190px;
+    color: #FFFFFF;
+}
+
+.result__test-check {
+    align-self: end;
+}
+
+.result__test-check a {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.result__test-check a:hover {
+    text-decoration: underline;
+}
+
+.result__test-check a img {
+    margin-left: 13px;
+}
